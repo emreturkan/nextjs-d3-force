@@ -51,7 +51,7 @@ const NetworkGraph: React.FC<Props> = ({ dataset }) => {
       .attr("height", (d: Node) => d.size + 5)
       .call(
         d3
-          .drag<SVGSVGElement, Node, unknown>() // Specify types for drag behavior
+          .drag<SVGSVGElement, Node, unknown>()
           .on("start", (event, d) => dragstarted(event, d))
           .on("drag", (event, d) => dragged(event, d))
           .on("end", (event, d) => dragended(event, d))
